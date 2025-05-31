@@ -14,3 +14,4 @@ def connect():
     ''')
     conn.commit()
     conn.close()
+

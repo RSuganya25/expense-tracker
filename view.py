@@ -10,3 +10,4 @@ def print_expenses():
 
 if __name__ == "__main__":
     print_expenses()
+

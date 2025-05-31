@@ -45,3 +45,4 @@ def delete_expense(id):
     cur.execute("DELETE FROM expenses WHERE id=?", (id,))
     conn.commit()
     conn.close()
+
