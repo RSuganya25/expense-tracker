@@ -16,6 +16,7 @@ expenses = view_expenses()
 for expense in expenses:
     print(expense)
 
+
 # Delete expense with ID 2 (example)
 delete_expense(2)
 
