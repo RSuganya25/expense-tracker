@@ -3,13 +3,25 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# SQLite database files (optional, if you don't want to track your DB)
+# SQLite database files
 data/*.db
 
-# VS Code settings (optional)
+# VS Code settings
 .vscode/
 
-
-# Mac system files (optional)
+# macOS system files
 .DS_Store
 
+# Logs
+*.log
+
+# Environment variables / secrets
+.env
+
+# Jupyter Notebook checkpoints (if ever used)
+.ipynb_checkpoints/
+
+# Python virtual environments
+venv/
+env/
+ENV/
