@@ -1,13 +1,16 @@
 from tracker import create_table, add_expense, view_expenses, update_expense, delete_expense
 from analysis import view_sorted_by_date, view_total_by_category
+from datetime import datetime  # ✅ Added for real date validation
 
 def get_valid_date(prompt):
     while True:
-        date = input(prompt).strip()
-        if len(date) == 10 and date[4] == '-' and date[7] == '-':
-            return date
-        else:
-            print("Invalid date format. Please enter date as YYYY-MM-DD.")
+        date_str = input(prompt).strip()
+        try:
+            # ✅ Validates real date (not just format)
+            datetime.strptime(date_str, "%Y-%m-%d")
+            return date_str
+        except ValueError:
+            print("Invalid date. Please enter a valid date in YYYY-MM-DD format.")
 
 def get_nonempty_input(prompt):
     while True:
